@@ -1,0 +1,64 @@
+.Btn {
+  width: 100%;
+  min-height: 6vh;
+  padding: 0;
+  font-size: 2vw;
+  background-color: lightgray;
+  border: unset;
+  box-shadow: 5px 2px 2px black;
+  border-radius: 50px;
+}
+
+table.table_body {
+  background-color: lightgray;
+  width: 100%;
+}
+
+tbody td:hover button {
+  background: linear-gradient(darkslategrey, darkgray);
+
+  color: white;
+}
+
+#casio {
+  min-width: 200px;
+  height: 30vh;
+  padding: 50px 10px 10px 10px;
+  background-color: darkslategrey;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray, -3px -3px 10px gray;
+}
+
+#casioHead {
+  width: 15vw;
+  height: 5vh;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#casioInput {
+  width: 15vw;
+  height: 5vh;
+  border-radius: 20px;
+  background-color: white;
+}
+
+#casioReset,
+#casioResult {
+  background-color: tomato;
+}
+
+.casio_body td {
+  padding: 0px;
+}
+.cancle-btn {
+  padding: 1px 0 0 0;
+  width: 20px;
+  position: absolute;
+  top: 1%;
+  left: calc(100% - 35px);
+  border-radius: 20px;
+  background-color: lightgray;
+  text-align: center;
+  box-shadow: 2px 2px 10px gray;
+}
