@@ -35,7 +35,7 @@ for (let i = 0; i < btn_num.length; i++) {
       if (numResult.innerText) {
         numResult.innerText = '';
         numli.innerText = '';
-        num1 = num1 + btn_num[i].innerText;
+        num1 = btn_num[i].innerText;
         numli.innerText = num1;
       } else {
         num1 = num1 + btn_num[i].innerText;
@@ -45,38 +45,53 @@ for (let i = 0; i < btn_num.length; i++) {
     }
   };
 }
-//계산 함수
-function sum(num1, num2) {
-  return Number(num1) + Number(num2);
-}
-function minus(num1, num2) {
-  return Number(num1) - Number(num2);
-}
-function division(num1, num2) {
-  return Number(num1) / Number(num2);
-}
-function multi(num1, num2) {
-  return Number(num1) * Number(num2);
+//계산 class
+class Calcul {
+  constructor(num1, num2) {
+    this.num1 = Number(num1);
+    this.num2 = Number(num2);
+  }
+  sum() {
+    return this.num1 + this.num2;
+  }
+  minus() {
+    return this.num1 - this.num2;
+  }
+  division() {
+    return this.num1 / this.num2;
+  }
+  multi() {
+    return this.num1 * this.num2;
+  }
 }
 
 //계산 버튼
 document.querySelector('#casioResult').onclick = function () {
+  if (numResult.innerText) {
+    num1 = numResult.innerText;
+  }
+  const result = new Calcul(num1, num2);
+  console.log(result);
   if (oper === '+') {
-    numResult.innerText = sum(num1, num2);
-    numli.innerText = sum(num1, num2);
+    numResult.innerText = result.sum();
+    numli.innerText = result.sum();
     oper = '';
+    num2 = '';
   } else if (oper === '-') {
-    numResult.innerText = minus(num1, num2);
-    numli.innerText = minus(num1, num2);
+    numResult.innerText = result.minus();
+    numli.innerText = result.minus();
     oper = '';
+    num2 = '';
   } else if (oper === '*') {
-    numResult.innerText = multi(num1, num2);
-    numli.innerText = multi(num1, num2);
+    numResult.innerText = result.multi();
+    numli.innerText = result.multi();
     oper = '';
+    num2 = '';
   } else if (oper === '/') {
-    numResult.innerText = division(num1, num2);
-    numli.innerText = division(num1, num2);
+    numResult.innerText = result.division();
+    numli.innerText = result.division();
     oper = '';
+    num2 = '';
   }
 };
 
