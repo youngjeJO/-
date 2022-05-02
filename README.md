@@ -19,3 +19,25 @@
 - 기능
   - 사칙연산이 가능한 계산기
   - 결과를 도출한 후 숫자 입력 시 결과값에 이어서 계산이 되도록 구현하였습니다.
+
+- class를 이용해 계산되도록 구현하였습니다.
+```
+class Calcul {
+  constructor(num1, num2) {
+    this.num1 = Number(num1);
+    this.num2 = Number(num2);
+  }
+  sum() {
+    return this.num1 + this.num2;
+  }
+  minus() {
+    return this.num1 - this.num2;
+  }
+  division() {
+    return this.num1 / this.num2;
+  }
+  multi() {
+    return this.num1 * this.num2;
+  }
+}
+```
