@@ -1,11 +1,11 @@
-// 숫자 클릭 시 casioHead와
-// 연산 클릭 시 casioHead에 출력
-// = 클릭 시 연산 결과값 casioHead와 casioInput에 출력
+// 숫자 클릭 시 calculHead와
+// 연산 클릭 시 calculHead에 출력
+// = 클릭 시 연산 결과값 calculHead와 calculInput에 출력
 
-const btn_num = document.querySelectorAll('.casio_num');
-const numli = document.querySelector('#casioHead');
-const btn_oper = document.querySelectorAll('.casio_oper');
-const numResult = document.querySelector('#casioInput');
+const btn_num = document.querySelectorAll('.calcul_num');
+const numli = document.querySelector('#calculHead');
+const btn_oper = document.querySelectorAll('.calcul_oper');
+const numResult = document.querySelector('#calculInput');
 
 let num1 = '';
 let num2 = '';
@@ -66,7 +66,7 @@ class Calcul {
 }
 
 //계산 버튼
-document.querySelector('#casioResult').onclick = function () {
+document.querySelector('#calculResult').onclick = function () {
   if (numResult.innerText) {
     num1 = numResult.innerText;
   }
@@ -96,7 +96,7 @@ document.querySelector('#casioResult').onclick = function () {
 };
 
 //reset 버튼
-document.querySelector('#casioReset').onclick = function () {
+document.querySelector('#calculReset').onclick = function () {
   numResult.innerText = '';
   numli.innerText = '';
   num1 = '';

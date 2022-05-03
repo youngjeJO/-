@@ -20,7 +20,7 @@ tbody td:hover button {
   color: white;
 }
 
-#casio {
+#calcul {
   min-width: 200px;
   height: 30vh;
   padding: 50px 10px 10px 10px;
@@ -29,26 +29,26 @@ tbody td:hover button {
   box-shadow: 5px 5px 10px gray, -3px -3px 10px gray;
 }
 
-#casioHead {
+#calculHead {
   width: 15vw;
   height: 5vh;
   border-radius: 20px;
   background-color: white;
 }
 
-#casioInput {
+#calculInput {
   width: 15vw;
   height: 5vh;
   border-radius: 20px;
   background-color: white;
 }
 
-#casioReset,
-#casioResult {
+#calculReset,
+#calculResult {
   background-color: tomato;
 }
 
-.casio_body td {
+.calcul_body td {
   padding: 0px;
 }
 .cancle-btn {
